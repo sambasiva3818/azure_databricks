@@ -1,0 +1,31 @@
+
+
+
+What is DataFrame?
+- DataFrame apperead in Spark 1.3
+- It is a Dataset organized into named columns
+- It is similar to the table in relational database or data frames in R/Python - Pandas
+
+Why DataFrame?
+- It's one step ahead of RDD.
+- Sice it provides memory management and optimized execution plan.
+
+Custom Memory Management: This is also known as Project Tungsten.
+- A lot of memory is saved as the data is stored in off-heap memory in binary format.
+- Apart from this, these is no Garbage Collection overhead.
+- Expensive Java serialization is also avoided.
+
+Optimized Execution Plan: This is also known as the query optimizer.
+Using this, an optimized execution plan is created for the execution of a query. Once the Optimized plan is created final execution takes place on RDDs of Spark.
+
+Features of Spark DataFrame?
+- Supports for various data formats like Hive, CSV, XML, JSON, RDDs, Casandra, Parquet etc
+- Supports for integration with various Big Data tools.
+- Catalyst optimizer for efficient data processing across multiple languages.
+- Custom memory management to reduce overload and improve performance compared to RDDs.
+- APIs for Java, R, Python, and Spark.
+
+Limitations?
+- DataFrame API does not have provision for compile time type safety.
+- If the structure is unknown, we cannot manipulate the data.
+
